@@ -54,7 +54,6 @@ namespace Grades.WPF
         {
             get { return (Record.Subject != null) ? Record.Subject.Name : ""; }
         }
-
         [IncludeInReport(Label = "Date")]
         public string AssessmentDateString
         {
@@ -88,14 +87,12 @@ namespace Grades.WPF
                 Record.SubjectId = value.Id;
             }
         }
-
         [IncludeInReport(Label = "Grade")]
         public string Assessment
         {
             get { return Record.Assessment; }
             set { Record.Assessment = value; }
         }
-
         [IncludeInReport(Label = "Comments")]
         public string Comments
         {

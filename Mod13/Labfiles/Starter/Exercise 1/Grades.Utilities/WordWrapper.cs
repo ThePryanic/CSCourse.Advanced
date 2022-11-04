@@ -122,9 +122,9 @@ namespace Grades.Utilities
                 {
                     // TODO: Exercise 1: Task 3d: Create an AES encryptor based on the key and IV.
                     using (var encryptor = algorithm.CreateEncryptor())
-                {
-                    var keyFormatter = new RSAPKCS1KeyExchangeFormatter(provider);
-                    var encryptedKey = keyFormatter.CreateKeyExchange(algorithm.Key, algorithm.GetType());
+                    {
+                        var keyFormatter = new RSAPKCS1KeyExchangeFormatter(provider);
+                        var encryptedKey = keyFormatter.CreateKeyExchange(algorithm.Key, algorithm.GetType());
 
                         // TODO: Exercise 1: Task 3e: Create byte arrays to get the length of the encryption key and IV. 
                         var keyLength = BitConverter.GetBytes(encryptedKey.Length);
@@ -149,12 +149,12 @@ namespace Grades.Utilities
                             encrypt.FlushFinalBlock();
 
                             // TODO: Exercise 1: Task 3i: Return the encrypted buffered data as a byte[].
+
                             return outStream.ToArray();
                         }
                     }
                 }
             }
-
 
 
 
